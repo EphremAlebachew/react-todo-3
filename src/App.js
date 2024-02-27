@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+const list = [
+  {
+    title: "react",
+    url: "http://reactjs.org",
+    author: "jordan",
+    num_comment: 3,
+    points: 4,
+    objectId: 0,
+  },
+  {
+    title: "redux",
+    url: "http://redux.org",
+    author: "Dan",
+    num_comment: 2,
+    points: 5,
+    objectId: 1,
+  },
+];
 
+const name = "react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello {name} </h1>
+      <label htmlFor="search">search: </label>
+      <input id="search" type="text" />
+      <ul>
+        {list.map(function (item) {
+          return (
+            <li key={item.objectId}>
+              {/* {item.title} */}
+              <span>
+                <a href={item.url}>{item.title} </a>
+              </span>
+            </li>
+            //  <li>1</li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
-
 export default App;
