@@ -2,12 +2,14 @@ import React from "react";
 import TodoList from "./TodoList/TodoList";
 import AddTodoForm from "./AddTodoForm/AddTodoForm";
 
+
 function App() {
   return (
     <div>
-     
+      
       <TodoList />
       <AddTodoForm />
+      
 
     </div>
     
