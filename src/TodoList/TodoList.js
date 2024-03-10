@@ -27,7 +27,7 @@ function TodoList() {
     <div>
       <h1>Todo List</h1>
       <h1>Hello react</h1>
-      <h5>Hello react</h5>
+     
       <label htmlFor="search">search: </label>
       <input id="search" type="text" />
       <ul>

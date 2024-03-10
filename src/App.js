@@ -1,7 +1,8 @@
-import React from "react";
+import { useState } from 'react';
+// import React from "react";
 import TodoList from "./TodoList/TodoList";
 import AddTodoForm from "./AddTodoForm/AddTodoForm";
-import React, { useState } from 'react';
+
 
 function App() {
   const [newTodo, setNewTodo] = useState('');
