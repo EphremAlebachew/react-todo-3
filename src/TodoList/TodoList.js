@@ -29,7 +29,6 @@ function TodoList() {
       <h1>Hello react</h1>
       <label htmlFor="search">search: </label>
       <input id="search" type="text" />
-
       <ul>
         {list.map((todo) => (
           <TodoListItem key={todo.objectId} todo={todo} />
