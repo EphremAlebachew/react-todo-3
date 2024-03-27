@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoList from "./TodoList/TodoList";
+import AddTodoForm from "./AddTodoForm/AddTodoForm";
+import React, { useState } from 'react';
 
 function App() {
+  const [newTodo, setNewTodo] = useState('');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>New Todo: {newTodo}</p>
+      <AddTodoForm onAddTodo={setNewTodo} />
+      <TodoList />
+
+      
+
     </div>
+    
   );
 }
 
 export default App;
+
+
+// function getArea(x, y) {
+//   return x * y;
+// }
+// console.log(getArea(45,4))
+//with terminal node.\Math.js run and get result
